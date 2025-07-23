@@ -9,5 +9,5 @@ return {
         "windwp/nvim-ts-autotag",
         config = true
     },
-    { "RRethy/nvim-treesitter-endwise" }
+    -- { "RRethy/nvim-treesitter-endwise" }
 }

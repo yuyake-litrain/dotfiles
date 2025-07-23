@@ -4,7 +4,7 @@ return {
 
     {
         "nvim-telescope/telescope.nvim",
-        version = "0.1.8",
+        branch = "master",
         config = function()
             require("telescope").setup({
                 extensions = {

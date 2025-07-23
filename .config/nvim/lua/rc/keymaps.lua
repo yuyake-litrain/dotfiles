@@ -63,7 +63,7 @@ wk.add({
     -- ######
     -- neo-tree
     -- ######
-    { "<C-f>",      "<cmd>:NeoTreeFocusToggle<cr>",          desc = "[NeoTree] Toggle" },
+    { "<C-f>",      "<cmd>Neotree float toggle focus<cr>",          desc = "[NeoTree] Toggle" },
     -- ######
     -- Neovim default features
     -- ######
