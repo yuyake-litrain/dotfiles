@@ -1,3 +1,4 @@
+--- Install tree-sitter-cli before using.
 --- @module "lazy"
 --- @type LazyPluginSpec[]
 return {
@@ -7,12 +8,15 @@ return {
         --     local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
         --     ts_update()
         -- end,
-        event = { "BufReadPre", "BufNewFile" },
+        -- event = { "BufReadPre", "BufNewFile" },
         branch = 'main',
         lazy = false,
         build = ":TSUpdate",
+        opts = {
+            install_dir = vim.fn.stdpath('data') .. '/site'
+        },
         config = function()
-            require("nvim-treesitter").install {
+            require("nvim-treesitter").install({
                 "tsx",
                 "lua",
                 "rust",
@@ -46,7 +50,7 @@ return {
                 "svelte",
                 "regex",
                 "astro"
-            }
+            })
         end
     },
 
@@ -59,3 +63,4 @@ return {
         config = true
     }
 }
+
